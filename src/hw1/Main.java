@@ -19,7 +19,7 @@ public class Main {
         Product item1 = new Product(100, 1, "Lays");
         Product item2 = new Product(50, 2, "Cola");
         Product item3 = new Bottle(150, 3, "Mineral Water", 101, (float)1.5);
-        Product hotDrink = new HotDrink(80, 4, "Coffee", 23, 100);
+        Product hotDrink = new HotDrink(80, 4, "Coffee", 23, 90);
         assort.add(item1);
         assort.add(item2);
         assort.add(item3);
@@ -31,24 +31,11 @@ public class Main {
 
         VendingMachine venMachine = new VendingMachine(hold1, coinDesp, assort, disp);
 
-//        for(Product prod: venMachine.getProducts())
-//        {
-//            System.out.println(prod);
-//        }
-        for (int i = 0; i <= 100; i++) {
-            TimeUnit.SECONDS.sleep(2);
-            System.out.println("Making coffee..." + i + "C°");
-            i += 19;
-        }
-        TimeUnit.SECONDS.sleep(1);
-        System.out.println("Done!");
-        TimeUnit.SECONDS.sleep(1);
-
         System.out.println(hotDrink);
+
 
 //        MainFrame myFrame = new MainFrame();
 //        myFrame.initialize();
 
-        //System.out.println("Hello, World!");
     }
 }

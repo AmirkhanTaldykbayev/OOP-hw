@@ -1,9 +1,5 @@
 package hw1.Domen;
 
-import java.sql.Time;
-import java.util.Timer;
-import java.util.concurrent.DelayQueue;
-import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
 public class HotDrink extends Product {
@@ -21,12 +17,26 @@ public class HotDrink extends Product {
         this.temperature = temperature;
     }
 
-    public int getTemperature() {
-        return temperature;
+    public int getTemperature() throws InterruptedException {
+        int temp = 0;
+        for (int i = 0; i <= temperature; i++) {
+            TimeUnit.SECONDS.sleep(1);
+            temp = i;
+            System.out.println("Making coffee..." + temp + "C°");
+            i += 9;
+        }
+        TimeUnit.SECONDS.sleep(1);
+        System.out.println("Done!");
+        TimeUnit.SECONDS.sleep(1);
+        return temp;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Temperature = " + getTemperature() + "C°";
+        try {
+            return super.getName() + " is ready! " + "\nTemperature = " + getTemperature() + "C°" + "\nPrice = " + super.getPrice();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

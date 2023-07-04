@@ -5,8 +5,6 @@ import java.util.concurrent.TimeUnit;
 public class HotDrink extends Product {
     private int temperature;
 
-    TimeUnit tu = TimeUnit.SECONDS;
-
     public HotDrink(int price, int place, String name, long id) {
         super(price, place, name, id);
         this.temperature = 0;

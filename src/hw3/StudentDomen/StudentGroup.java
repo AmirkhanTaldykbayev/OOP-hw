@@ -42,7 +42,8 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
             }
         };
     }
-
+    /**
+     * Переоопределение метода Comparable для сравнения групп по количеству студентов*/
     @Override
     public int compareTo(StudentGroup o) {
         if(this.getStudents().size() == o.getStudents().size()){

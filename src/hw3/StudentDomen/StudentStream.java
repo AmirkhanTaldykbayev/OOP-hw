@@ -4,8 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class StudentStream implements Iterable<StudentGroup> {
-    private List<StudentGroup> stream;
-    private long streamId;
+    private List<StudentGroup> stream; //поток студентов
+    private long streamId; //поле c номером потока
 
     public StudentStream(List<StudentGroup> stream, long streamId) {
         this.stream = stream;
@@ -20,6 +20,8 @@ public class StudentStream implements Iterable<StudentGroup> {
         this.stream = stream;
     }
 
+    /**
+     * Переопределение метода Iterator*/
     @Override
     public Iterator<StudentGroup> iterator() {
         return new Iterator<StudentGroup>() {

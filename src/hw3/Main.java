@@ -1,12 +1,10 @@
 package hw3;
 
-import hw3.StudentDomen.Student;
-import hw3.StudentDomen.StudentGroup;
-import hw3.StudentDomen.StudentStream;
-import hw3.StudentDomen.User;
+import hw3.Services.AverageAge;
+import hw3.Services.TeacherService;
+import hw3.StudentDomen.*;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -37,7 +35,7 @@ public class Main {
 //        for (Student stud: group) System.out.println(stud);
 
 
-        //--------------------------------------Домашнее задание-----------------------------------//
+        //--------------------------------------Домашнее задание3-----------------------------------//
 
         Student a1 = new Student("Amir", "T", 29, 23);
         Student a2 = new Student("David", "B", 25, 85);
@@ -51,12 +49,12 @@ public class Main {
         listStud2.add(a3);
         listStud2.add(a4);
 
-        StudentGroup group2 = new StudentGroup(listStud2,17);
-
-//        for (Student stud : group2) {
-//            System.out.println(stud);
-//        }
-
+        StudentGroup group2 = new StudentGroup(listStud2, 17);
+//
+////        for (Student stud : group2) {
+////            System.out.println(stud);
+////        }
+//
         Student b1 = new Student("Aleskandr", "W", 33, 96);
         Student b2 = new Student("Alexey", "G", 42, 55);
 
@@ -64,13 +62,13 @@ public class Main {
 
         listStud3.add(b1);
         listStud3.add(b2);
-
+//
         StudentGroup group3 = new StudentGroup(listStud3, 47);
-
-//        for (Student stud : group3) {
-//            System.out.println(stud);
-//        }
-
+//
+////        for (Student stud : group3) {
+////            System.out.println(stud);
+////        }
+//
         List<StudentGroup> studentGroupList = new ArrayList<>();
         studentGroupList.add(group);
         studentGroupList.add(group2);
@@ -78,15 +76,30 @@ public class Main {
 
 
         StudentStream studentStream = new StudentStream(studentGroupList, 1);
+//
+//        for (StudentGroup sG: studentStream) {
+//            System.out.println(sG.getStudents());
+//        }
+//
+//        Collections.sort(studentStream.getStream());
+//
+//        for (StudentGroup sG: studentStream) {
+//            System.out.println(sG.getStudents());
+//        }
+        //--------------------------------------Домашнее задание4-----------------------------------//
 
-        for (StudentGroup sG: studentStream) {
-            System.out.println(sG.getStudents());
-        }
+        Teacher t1 = new Teacher("a", "b", 46, 1); // создание экземпляра класса Teacher
 
-        Collections.sort(studentStream.getStream());
+        System.out.println(AverageAge.meanAge(group.getStudents())); // вызов статического метода и вывод в консоль
 
-        for (StudentGroup sG: studentStream) {
-            System.out.println(sG.getStudents());
-        }
+        double gr1 = AverageAge.meanAge(group.getStudents());
+        double gr2 = AverageAge.meanAge(group2.getStudents());
+        double gr3 = AverageAge.meanAge(group3.getStudents());
+
+        double allGroupsMeanAge = gr1 + gr2 + gr3; // подсчет среднего возраста студентов из трёх групп
+
+        System.out.println(allGroupsMeanAge);
+
+
     }
 }

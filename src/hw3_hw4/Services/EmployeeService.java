@@ -1,7 +1,6 @@
-package hw3.Services;
+package hw3_hw4.Services;
 
-import hw3.StudentDomen.Employee;
-import hw3.StudentDomen.Student;
+import hw3_hw4.StudentDomen.Employee;
 
 import java.util.ArrayList;
 import java.util.List;

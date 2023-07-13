@@ -1,7 +1,6 @@
-package hw3.StudentDomen;
+package hw3_hw4.StudentDomen;
 
 import java.util.List;
-import java.util.Iterator;
 
 public class StudentGroupIterator {
     private int counter;

@@ -1,8 +1,7 @@
-package hw3;
+package hw3_hw4;
 
-import hw3.Services.AverageAge;
-import hw3.Services.TeacherService;
-import hw3.StudentDomen.*;
+import hw3_hw4.Services.AverageAge;
+import hw3_hw4.StudentDomen.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,7 @@
-package hw3.Controllers;
+package hw3_hw4.Controllers;
 
-import hw3.Services.TeacherService;
-import hw3.StudentDomen.Teacher;
-
-import javax.security.auth.callback.NameCallback;
+import hw3_hw4.Services.TeacherService;
+import hw3_hw4.StudentDomen.Teacher;
 
 public class TeacherController implements iUserController<Teacher>{
     private final TeacherService teacherService = new TeacherService();

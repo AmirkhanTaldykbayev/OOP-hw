@@ -1,8 +1,6 @@
-package hw3.Services;
+package hw3_hw4.Services;
 
-import hw3.StudentDomen.Student;
-import hw3.StudentDomen.Teacher;
-import hw3.StudentDomen.User;
+import hw3_hw4.StudentDomen.Teacher;
 
 import java.util.ArrayList;
 import java.util.Comparator;

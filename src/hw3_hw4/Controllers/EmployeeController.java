@@ -1,7 +1,7 @@
-package hw3.Controllers;
+package hw3_hw4.Controllers;
 
-import hw3.Services.EmployeeService;
-import hw3.StudentDomen.Employee;
+import hw3_hw4.Services.EmployeeService;
+import hw3_hw4.StudentDomen.Employee;
 
 
 public class EmployeeController implements iUserController<Employee>{

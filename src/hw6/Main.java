@@ -1,7 +1,7 @@
 package hw6;
 
 
-import hw6.DIP.Vehicle;
+import hw6.DIP.Car;
 
 
 

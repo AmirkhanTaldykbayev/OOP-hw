@@ -1,4 +1,4 @@
-package hw7.ComplexCalculator;
+package hw7.ComplexCalculator_1try;
 
 public interface iCalculable {
     iCalculable sum(int arg);

@@ -1,4 +1,4 @@
-package hw7.ComplexCalculator;
+package hw7.ComplexCalculator_1try;
 
 public class ComplexCalc implements iComplexCalculable {
 
@@ -27,27 +27,27 @@ public class ComplexCalc implements iComplexCalculable {
     }
 
     @Override
-    public iComplexCalculable sum(ComplexCalc calc) {
-        re += calc.re;
-        im += calc.im;
+    public iComplexCalculable sum(double real, double imag) {
+        re += real;
+        im += imag;
         return this;
     }
 
     @Override
-    public iComplexCalculable substract(ComplexCalc calc) {
-        re -= calc.re;
-        im -= calc.im;
+    public iComplexCalculable substract(double real, double imag) {
+        re -= real;
+        im -= imag;
         return this;
     }
 
     @Override
-    public iComplexCalculable divide(ComplexCalc calc) {
+    public iComplexCalculable divide(double real, double imag) {
         double tempRe = re;
         double tempIm = im;
-        double temp = (calc.re * calc.re) + (calc.im * calc.im);
+        double temp = (real * real) + (imag * imag);
 
-        re = ((tempRe * calc.re) + (tempIm * calc.im) / temp);
-        im = ((tempIm * calc.re) - (tempRe * calc.im) / temp);
+        re = ((tempRe * real) + (tempIm * imag) / temp);
+        im = ((tempIm * real) - (tempRe * imag) / temp);
 
         return this;
     }
